@@ -5,6 +5,7 @@ black==20.8b1
 click==7.1.2
 decorator==4.4.2
 Django==3.1.7
+django-countries==7.1
 djangorestframework==3.12.4
 ipython==7.22.0
 ipython-genutils==0.2.0

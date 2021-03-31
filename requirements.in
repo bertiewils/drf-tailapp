@@ -1,5 +1,6 @@
 # Requirements template
 
 black==20.8b1
+django-countries==7.1
 Django==3.1.7
 djangorestframework==3.12.4

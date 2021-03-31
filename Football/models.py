@@ -1,4 +1,5 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 
 class BaseModel(models.Model):
@@ -23,7 +24,7 @@ class League(BaseModel):
 
 class FootballTeam(BaseModel):
     name = models.CharField(max_length=64, unique=True)
-    country = models.CharField(max_length=2, db_index=True)
+    country = CountryField(db_index=True)
     year_founded = models.DateField()
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE, blank=True, null=True)
     league = models.ForeignKey(League, on_delete=models.CASCADE, blank=True, null=True)
