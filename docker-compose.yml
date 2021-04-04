@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - database:/opt/app/database
+    ports:
+      - "8000:8000"
+  # test:
+  #   build:
+  #     context: ./
+  #     dockerfile: ./docker/Dockerfile.test
+volumes:
+  database:
