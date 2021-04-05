@@ -1,0 +1,154 @@
+### Leagues
+# British
+- model: Football.league
+  pk: 1
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Premier League
+# German
+- model: Football.league
+  pk: 2
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Bundesliga
+# # Italian
+- model: Football.league
+  pk: 3
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Serie A
+# # Spanish
+- model: Football.league
+  pk: 4
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: La Liga
+
+# ### Stadiums
+- model: Football.Stadium
+  pk: 1
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Emirates Stadium
+    capacity: 60260
+- model: Football.Stadium
+  pk: 2
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Wembley Stadium
+    capacity: 90000
+- model: Football.Stadium
+  pk: 3
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Old Trafford
+    capacity: 75731
+
+# ### Football teams
+- model: Football.FootballTeam
+  pk: 1
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Manchester United
+    country: GB
+    year_founded: 1981-01-01
+    stadium: 1
+    league: 1
+- model: Football.FootballTeam
+  pk: 2
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Liverpool FC
+    country: GB
+    year_founded: 1971-01-01
+    stadium: 1
+    league: 1
+- model: Football.FootballTeam
+  pk: 3
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Chelsea FC
+    country: GB
+    year_founded: 1961-01-01
+    stadium: 1
+    league: 1
+- model: Football.FootballTeam
+  pk: 4
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: FC Barcelona
+    country: ES
+    year_founded: 1961-01-01
+    stadium: 3
+    league: 4
+- model: Football.FootballTeam
+  pk: 5
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Valencia CF
+    country: ES
+    year_founded: 1961-01-01
+    stadium: 3
+    league: 4
+- model: Football.FootballTeam
+  pk: 6
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: FC Bayern Munchen
+    country: DE
+    year_founded: 1961-01-01
+    stadium: 2
+    league: 2
+- model: Football.FootballTeam
+  pk: 7
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Borussia Dortmund
+    country: DE
+    year_founded: 1961-01-01
+    stadium: 2
+    league: 2
+- model: Football.FootballTeam
+  pk: 8
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Inter Milan
+    country: IT
+    year_founded: 1961-01-01
+    stadium: 2
+    league: 3
+- model: Football.FootballTeam
+  pk: 9
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: AC Milan
+    country: IT
+    year_founded: 1961-01-01
+    stadium: 2
+    league: 3
+- model: Football.FootballTeam
+  pk: 10
+  fields:
+    created: 2021-01-01T00:00:00Z
+    updated: 2021-01-02T00:00:00Z
+    name: Arsenal FC
+    country: GB
+    year_founded: 1961-01-01
+    stadium: 1
+    league: 1
