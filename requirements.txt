@@ -51,6 +51,8 @@ pygments==2.8.1
     # via ipython
 pytz==2021.1
     # via django
+pyyaml==5.4.1
+    # via -r requirements.in
 regex==2021.3.17
     # via black
 sqlparse==0.4.1
