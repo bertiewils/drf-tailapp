@@ -9,9 +9,8 @@ services:
       - ./database:/opt/app/database
     ports:
       - "8000:8000"
-  # test:
-  #   build:
-  #     context: ./
-  #     dockerfile: ./docker/Dockerfile.test
-volumes:
-  database:
+  test:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    command: python3 manage.py test
