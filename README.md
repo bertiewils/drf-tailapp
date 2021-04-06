@@ -20,7 +20,8 @@ A live demo using AWS ECS & ALB can be found at:
 
 The default superuser credentials are:
 
-    radu1: radu1
+    username: radu1
+    password: radu1
 
 
 ## Running the API with Docker
