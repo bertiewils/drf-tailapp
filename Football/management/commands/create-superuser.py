@@ -31,7 +31,9 @@ class Command(createsuperuser.Command):
     def add_arguments(self, parser):
         super(Command, self).add_arguments(parser)
         parser.add_argument(
-            '--password', dest='password', default=None,
+            '--password',
+            dest='password',
+            default=None,
             help='Specifies the password for the superuser.',
         )
 
@@ -43,8 +45,7 @@ class Command(createsuperuser.Command):
         email = options.get('email')
 
         if not password or not username or not email:
-            raise CommandError(
-                    "--email --username and --password are required options")
+            raise CommandError("--email --username and --password are required options")
 
         user_data = {
             'username': username,
@@ -52,8 +53,7 @@ class Command(createsuperuser.Command):
             'email': email,
         }
 
-        self.UserModel._default_manager.db_manager(
-                database).create_superuser(**user_data)
+        self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
 
         if options.get('verbosity', 0) >= 1:
             self.stdout.write("Superuser created successfully.")
