@@ -12,7 +12,18 @@ a stadium or a league can have multiple teams.
 The initial teams are loaded from `fixtures/initial_data.yaml`.
 
 
-# Running the API with Docker
+## Demo
+
+A live demo using AWS ECS & ALB can be found at:
+
+<http://ec2co-ecsel-1k709p9j85nt3-1327334817.eu-west-1.elb.amazonaws.com/api/v1/>
+
+The default superuser credentials are:
+
+    radu1: radu1
+
+
+## Running the API with Docker
 
     docker-compose build
     docker-compose run app python manage.py createsuperuser \
@@ -20,13 +31,13 @@ The initial teams are loaded from `fixtures/initial_data.yaml`.
     docker-compose up app
 
 
-# Running the tests with Docker
+## Running the tests with Docker
 
     # docker-compose build
     docker-compose run tests
 
 
-# Installing and running the app directly
+## Manually installing and running the app
 
 We assume `python3` is used.
 
@@ -41,7 +52,7 @@ We assume `python3` is used.
     python manage.py test
     python manage.py runserver
 
-# The API
+## The API
 
 The API can be reached at:
 
