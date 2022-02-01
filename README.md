@@ -11,6 +11,7 @@ a stadium or a league can have multiple teams.
 
 The initial teams are loaded from `fixtures/initial_data.yaml`.
 
+The database used is SQlite.
 
 ## Demo
 
