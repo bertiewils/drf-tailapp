@@ -14,9 +14,11 @@ The initial teams are loaded from `fixtures/initial_data.yaml`.
 
 ## Demo
 
+<!-- 
 A live demo using AWS ECS & ALB can be found at:
 
 <http://ec2co-ecsel-1k709p9j85nt3-1327334817.eu-west-1.elb.amazonaws.com/api/v1/>
+-->
 
 The default superuser credentials are:
 
