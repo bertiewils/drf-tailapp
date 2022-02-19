@@ -51,3 +51,5 @@ typed-ast==1.4.2
     # via black
 typing-extensions==3.7.4.3
     # via black
+
+psycopg2-binary
