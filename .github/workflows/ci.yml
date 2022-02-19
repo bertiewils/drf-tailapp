@@ -26,11 +26,17 @@ jobs:
 
       - name: Build image
         run: |
-          docker-compose build
+          docker build -t drf-tailapp -f docker/Dockerfile .
 
       - name: Run tests
         run: |
-          docker-compose run tests
+          docker run \
+            -e DATABASE_NAME=${{ secrets.DB_NAME }} \
+            -e DATABASE_USER=${{ secrets.DB_USER }} \
+            -e DATABASE_PASSWORD=${{ secrets.DB_PASS }} \
+            -e DATABASE_HOST=${{ secrets.DB_HOST }} \
+            drf-tailapp \
+            python3 manage.py test
 
       - name: Log into registry ${{ env.REGISTRY }}
         run: |
