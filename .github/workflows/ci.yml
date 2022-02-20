@@ -26,7 +26,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t drf-tailapp -f docker/Dockerfile .
+          docker build -t ${{ env.IMAGE_NAME }} -f docker/Dockerfile .
 
       - name: Run tests
         run: |
@@ -35,7 +35,7 @@ jobs:
             -e DATABASE_USER=${{ secrets.DB_USER }} \
             -e DATABASE_PASSWORD=${{ secrets.DB_PASS }} \
             -e DATABASE_HOST=${{ secrets.DB_HOST }} \
-            drf-tailapp \
+            ${{ env.IMAGE_NAME }} \
             python3 manage.py test
 
       - name: Configure AWS Credentials
@@ -50,9 +50,10 @@ jobs:
           aws ecr-public get-login-password --region us-east-1 \
             | docker login --username AWS --password-stdin ${{ env.REGISTRY }}
 
-      - name: Build, tag, and push image to Amazon ECR
+      - name: Tag and push image to Amazon ECR
         run: |
-          docker tag drf-tailapp:latest ${{ env.REGISTRY }}/drf-tailapp:latest
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Log out of Amazon ECR
         if: always()
